@@ -1,0 +1,18 @@
+{
+    "jenkins-jack.jenkins.connections": [
+       
+        {
+            "name": "localhost",                            // "name" can be seen in the host selection command
+            "uri": "http://localhost:8080",
+            "username": "bdarras",
+    
+    
+            "password": "11ac67ded17289aa1f3b39ae315c8dbfa1",  // gen API token via <your-jenkins>/user/<user name>/configure
+                                                            // E.g. http://127.0.0.1:8080/user/drapplesauce/configure
+    
+            "active": true                                  // Indicates the active jenkins host you're connected to.
+                                                            // Also set via host selection command
+        }
+    ]
+
+    
