@@ -42,13 +42,15 @@ pipeline {
                 script { 
                     if (env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'staging') {
                         echo 'This is not master or staging'
+                        echo env.BRANCH_NAME
                     } else {
                         echo 'things and stuff'
+                        env.BRANCH_NAME
                     }
                 }
             }
         }
-        
+
 
     }
 }
