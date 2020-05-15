@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "helloWorld!"'
+                sh 'echo BRANCH_NAME'
             }
         }
     }
