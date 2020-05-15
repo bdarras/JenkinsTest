@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh 'echo "helloWorld!"'
             }
+        }
 
         stage('NON PROD (Not master)') {
             when {
@@ -28,12 +29,11 @@ pipeline {
 
         stage('PROD (master)') {
             when {
-                    branch 'master'
-                }
+                branch 'master'
             }
             steps {
                 sh 'echo "MASTER"'
             }
-        }        
+        }
     }
 }
