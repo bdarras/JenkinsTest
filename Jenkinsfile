@@ -12,8 +12,28 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "helloWorld!"'
-                sh 'echo BRANCH_NAME'
+            }
+
+        stage('NON PROD (Not master)') {
+            when {
+                not {
+                    branch 'master'
+                }
+            }
+            steps {
+                sh 'echo "Not MASTER"'
             }
         }
+
+
+        stage('PROD (master)') {
+            when {
+                    branch 'master'
+                }
+            }
+            steps {
+                sh 'echo "MASTER"'
+            }
+        }        
     }
 }
